@@ -85,6 +85,27 @@
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
     </style>
 
+    <style name="AppTheme.ComposeSplash" parent="Theme.Material3.Light.NoActionBar">
+        <item name="android:windowBackground">@color/window_background</item>
+        <item name="android:statusBarColor">@color/window_background</item>
+        <item name="android:navigationBarColor">@color/window_background</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@null</item>
+        <item name="android:windowSplashScreenBackground">@color/window_background</item>
+        <item name="android:windowSplashScreenBrandingImage">@null</item>
+    </style>
+
+    <!-- 夜间模式 -->
+    <style name="AppTheme.ComposeSplash.Dark" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="android:windowBackground">@color/window_background_night</item>
+        <item name="android:statusBarColor">@color/window_background_night</item>
+        <item name="android:navigationBarColor">@color/window_background_night</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@null</item>
+        <item name="android:windowSplashScreenBackground">@color/window_background_night</item>
+        <item name="android:windowSplashScreenBrandingImage">@null</item>
+    </style>
+
     <style name="AppTheme.Settings" parent="AppTheme">
         <item name="android:dividerHeight">0dp</item>
         <item name="android:listDivider">@color/divider_app_settings_list</item>

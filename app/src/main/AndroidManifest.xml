@@ -233,12 +233,22 @@
                 android:resource="@xml/app_shortcuts" />
         </activity>
 
+        <activity
+            android:name="org.autojs.autojs.ui.modern.activity.ComposeSplashActivity"
+            android:exported="true"
+            android:theme="@style/AppTheme.Splash">
+
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/app_shortcuts" />
+        </activity>
+
         <activity-alias
             android:name="org.autojs.autojs.launcher.AdaptiveIconAlias"
             android:enabled="true"
             android:exported="true"
             android:icon="${icon}"
-            android:targetActivity="org.autojs.autojs.ui.splash.SplashActivity">
+            android:targetActivity="org.autojs.autojs.ui.modern.activity.ComposeSplashActivity">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -296,6 +306,38 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+
+        <!-- @Append Compose Activity By SSOOR on 2026/03/10 -->
+        <activity
+            android:name="org.autojs.autojs.ui.modern.activity.ComposeMainActivity"
+            android:label="@string/text_file"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="org.autojs.autojs.ui.modern.activity.settings.ComposeSettingsActivity"
+            android:label="@string/text_settings"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name="org.autojs.autojs.ui.modern.activity.ComposeExplorerActivity"
+            android:label="@string/text_file"
+            android:theme="@style/AppTheme" />
+            
+        <activity
+            android:name="org.autojs.autojs.ui.modern.log.ComposeLogActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.FullScreen"
+            android:label="@string/text_log" />
+
+        <service
+            android:name="org.autojs.autojs.automation.service.foreground.ScriptForegroundService"
+            android:foregroundServiceType="specialUse">
+
+            <property
+                android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+                android:value="To ensure the app can smoothly complete automation workflow even when running in the background" />
+        </service>
+
+
 
         <provider
             android:name="androidx.core.content.FileProvider"
